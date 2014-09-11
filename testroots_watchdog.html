@@ -35,7 +35,7 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </button>
-       <img src="assets/img/testroots_small.png" />
+       <img src="assets/img/testroots_small_white.png" />
      </div>
      <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
@@ -56,7 +56,7 @@
   				<div class="col-lg-8 col-lg-offset-2">
   				<img src="assets/img/watchdog_big.png" />
 				<h2>DO YOU PROGRAM JAVA WITH ECLIPSE?</h2>
-				<h3>YOU CAN WIN AMAZING PRIZES WITH ZERO EXTRA WORK, AND HELP SCIENCE ALONG THE WAY.</h3>
+				<h3>YOU CAN WIN AMAZING PRIZES WITH ZERO EXTRA WORK, AND HELP SCIENCE ALONG THE WAY. <a href="#install">DOWNLOAD</a></h3>
 				</div>
   			</div><!-- row -->
   		</div><!-- container -->
@@ -115,10 +115,31 @@
   		</div><!-- container -->
   	</div><!-- DG -->
 
-  		<!-- FEATURE SECTION -->
+	<div class="container desc">
+		<div class="row centered"><h4>FIND YOUR TRUE DEVELOPER-SELF!</h4></div>
+		<div class="row">
+			<br><br>
+			<div class="col-lg-6 centered"><img src="assets/img/report.png" alt=""><br><br>
+			</div><!-- col-lg-6 -->
+			<div class="col-lg-6">
+  			<p>At the end of our case study in February 2015, you (and only you!) will receive a report of your personal test practices per email, certified by TU Delft.<br><br>For that, you have to register WatchDog with a valid email address of yours. You'll receive a beautiful report on your personal development behaviour that helps you improve your coding abilities.<br><br> So you are already a perfect software engineer, you say? We'll tell you <b class="fa fa-smile-o"></b>.<br><br>We have lots of experience with the generation of <a href="http://ghtorrent.org/pullreq-perf/rails-rails/">helpful, beautiful reports.</a></p>			
+			</div>
+		</div><!-- row -->
+	</div><!-- container -->
+
+<div id="dg">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-8 col-lg-offset-2"><a name="install"></a>
+				<h2>You and your content stay completely anonymous. We <b>never</b> transfer any content!</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
   	<div class="container wb">
   		<div class="row centered">
-  			<div class="col-lg-8 col-lg-offset-2"><a name="install"></a><h1><b>I want to install WatchDog!</b></h1><br>
+  			<div class="col-lg-8 col-lg-offset-2"><h1><b>I want to install WatchDog!</b></h1><br>
   				<p>Fire up your Eclipse and go to <code>Help > Install New Software</code>. Add the WatchDog Update Site URL below behind <code>Work with: </code>. Our <code>Test Roots Development Tools</code> will appear. Tick them and click <code>Next</code> to install WatchDog. Restart Eclipse. That's it.</p><br>
   				<p><h2>WatchDog Eclipse Update Site: <pre><h4><a>testroots.org/we-are-still-in-beta-check-back-in-September</a></h4></pre><br>
 
@@ -126,41 +147,31 @@
   		</div><!-- row -->
   	</div><!-- container -->
 
-	<div id="dg">
-		<div class="container">
-			<div class="row centered">
-				<div class="col-lg-8 col-lg-offset-2">
-				<h2>You and your content stay completely anonymous. We <b>never</b> transfer any content!</h2>
-				</div>
-			</div>
-		</div>
-	</div>
 
+	<div id="dg">
 	<!-- FEATURE SECTION -->
   	<div class="container wb">
   		<div class="row centered">
   			<div class="col-lg-8 col-lg-offset-2"><a name="details"></a><h1>Understanding how (much) Developers test.</h1>
-  			<br><br>
-  				<p>The premise of TestRoots is to gain a deep understanding of how software is tested in the real world, and then suggest improvements based upon this thorough analysis. With WatchDog, we are interested in how you, as a Java developer, utilize Eclipse and Junit. Not what you use it for. Hence, the data WatchDog measures is strictly numerical: We never transfer any content (not file names, and not even project names). You can trust us on this, <a href="about.html">we are nice guys.</a> Or read on, what WatchDog, an <a href="https://github.com/TestRoots/watchdog">unobtrusive, open-sourced Eclipse plugin</a> developed at TU Delft, really transfers.</p>
-  				<br><br>
-  			</div>
+  			<br>
+  				<p>The premise of TestRoots is to gain a deep understanding of how software is tested in the real world, and then suggest improvements based upon this thorough analysis. With WatchDog, we are interested in how you, as a Java developer, utilize Eclipse and Junit. Not what you use it for. Hence, the data WatchDog measures is strictly numerical: We never transfer any content (not file names, and not even project names). You can trust us on this, <a href="about.html">we are nice guys.</a> Or read on, what WatchDog, an <a href="https://github.com/TestRoots/watchdog">unobtrusive, open-sourced Eclipse plugin</a> developed at TU Delft, really transfers.</p></div>
   		</div><!-- row -->
   	</div><!-- container -->
+	</div>
 
 
-	<div id="dg">
 		<div class="container">
 			<div class="row centered">
+  				<br><br>
 				<div class="col-lg-8 col-lg-offset-2">
 				<h4><b>I am a techie. Please, tell me what you transfer and how you transfer it. I'll make sense of it myself.</b></h4>
 				<p>WatchDog centers around the concepts of intervals. Based on what event WatchDog receives from the Eclipse IDE, it closes or creates a new interval. We have intervals for when you start Eclipse, when you change focus to Eclipse, when you change your perspective, when you run Junit tests and when you read or type code. When you read or type code, we see if we can figure out whether that's production or test code. When you type, we try to figure out how much code you changed in each typing interval (by calculating the Levensthein distance). That's all we do. So we will never see one letter that you type.</p>
 				<p>Still not convinced? Alright, here's a  JSON-ified TypingInterval (the most interesting one, really) as we transfer it to our server:
 				<pre>{ "<abbr title="This represent the document when the typing interval is closed (e.g. when you stopped typing for a while).">endingDocument</abbr>" : { <abbr title="How many source lines of code the document had">"sloc"</abbr> : 3, <abbr title="The document type: Is it Java production code, Java test code or do we have no clue?">"dt"</abbr> : <abbr title="Un(kown) ... Ups, no idea what you are editing, but have fun!">"un"</abbr> }, "<abbr title="The Levensthein distance required to go from the original document to the ending document, a type of edit distance that represents the difference between the two documents.">diff</abbr>" : 425, <abbr title="This represent the document when you started typing.">"doc"</abbr> : { "sloc" : 31, "dt" : "un" }, "<abbr title="The interval type">it</abbr>" : "<abbr title="Typing, in this case">ty</abbr>", "<abbr title="Timestamp when the interval started">ts</abbr>" : NumberLong("1408110488025"), "<abbr title="Timestamp when the interval ended">te</abbr>" : NumberLong("1408110508039"), "<abbr title="Session seed so you can have multiple Eclipse instance open at the same time.">ss</abbr>" : NumberLong("-7490789694621659010"), "<abbr title="Your very personal user-id">uid</abbr>" : "935d7573c056c424f668d935ef18b4a0bf96c365", "<abbr title="Your very project-id">pid</abbr>" : "efdcb880844893f847d70907174315d95c50caa6" }</pre>
-				How we can do something sensible with such data? Yeah, we sometimes start to wonder as well ...</p>
+				<br>How we can do something sensible with such data? Yeah, we sometimes start to wonder as well ...</p><br><br>
 				</div>
 			</div><!-- row -->
 		</div><!-- container -->
-	</div><!--  bluewrap -->
 
 
 
