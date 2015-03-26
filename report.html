@@ -159,7 +159,7 @@ $('#pid').on('input', function() {
   $('#getreport').attr('disabled', 'disabled');
   return;
  }
- var requestedURL = baseURL + value + ".pdf";
+ var requestedURL = baseURL + value + ".html";
 
  if(UrlExists(requestedURL)) {
   $('#getreport').removeAttr('disabled');
