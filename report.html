@@ -79,7 +79,7 @@
 			<div class="col-lg-6 centered"><img src="assets/img/report.png" alt=""><br><br>
 			</div><!-- col-lg-6 -->
 			<div class="col-lg-6" style="vertical-align:middle">
-  				<form>
+  				<form id="reportform">
   				<p><label for="pid">Project-ID (PID) for which you want your report</label> 
 				  <br><input type="text" name="pid" id="pid" size="40" maxlength="40">
 				  <input type="submit" value="Get Report!" id="getreport" disabled></p>
@@ -153,6 +153,7 @@ function UrlExists(url)
 }
 
 var baseURL = "/reports/project/";
+var requestedURL;
 
 $('#pid').on('input', function() {
  var value = $( '#pid').val();
@@ -160,7 +161,7 @@ $('#pid').on('input', function() {
   $('#getreport').attr('disabled', 'disabled');
   return;
  }
- var requestedURL = baseURL + value + ".html";
+ requestedURL = baseURL + value + ".html";
 
  if(UrlExists(requestedURL)) {
   $('#getreport').removeAttr('disabled');
@@ -168,6 +169,12 @@ $('#pid').on('input', function() {
   $('#getreport').attr('disabled', 'disabled');
 }
 });
+
+$('#reportform').submit(function() {
+window.location.href = requestedURL;
+return false;
+});
+
 </script>
   </body>
   </html>
