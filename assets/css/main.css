@@ -95,7 +95,7 @@ a:after {
 }
 
 .navbar-inverse .navbar-nav > .active > a {
-	background: #ff7878
+	background: #3498db
 }
 
 .navbar-inverse .navbar-brand {
@@ -227,7 +227,13 @@ a:after {
 	color: white;
 }
 
+#blue a {
+	color: #FFC930;
+}
 
+#blue a:hover {
+	color: #FFA430;
+}
 
 /* Footer Wrap */
 #f {
